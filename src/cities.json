@@ -1,0 +1,126 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": 0,
+        "properties": {
+          "Code": "SP",
+          "Name": "São Paulo"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-23.5674, -46.5704]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 1,
+        "properties": {
+          "Code": "RJ",
+          "Name": "Rio De Janeiro"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-22.8767, -43.2279]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 2,
+        "properties": {
+          "Code": "DF",
+          "Name": "Brasília"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-15.7941, -47.8879]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 3,
+        "properties": {
+          "Code": "BA",
+          "Name": "Salvador"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-13.0148, -38.4881]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 4,
+        "properties": {
+          "Code": "CE",
+          "Name": "Fortaleza"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.7238, -38.5899]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 5,
+        "properties": {
+          "Code": "BH",
+          "Name": "Belo Horizonte"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-19.9375, -43.9265]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 6,
+        "properties": {
+          "Code": "AM",
+          "Name": "Manaus"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.1347, -60.0233]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 7,
+        "properties": {
+          "Code": "PR",
+          "Name": "Curitiba"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-25.433, -49.2718]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 8,
+        "properties": {
+          "Code": "PE",
+          "Name": "Recife"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-8.0628, -34.8889]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 9,
+        "properties": {
+          "Code": "GO",
+          "Name": "Goiânia"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-16.6733, -49.2558]
+        }
+      }
+    ]
+  }
+  
