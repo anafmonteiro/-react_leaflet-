@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Tooltip, LayerGroup, Circle, Polyline } from 'react-leaflet';
-import Control from 'react-leaflet-custom-control'
-// import { Button } from '@mui/material'
+import { MapContainer, TileLayer, LayerGroup, Polyline } from 'react-leaflet';
 
 import Cities from "../../cities.json";
 import Origin from "../../origin.json";
 import Demand from "../../demand.json";
-
-import { Container, Round, Title } from './styles';
 import Zone from '../Zone';
+import Legend from '../Legend';
 
 const defaultLatLng: number[] = [-15.7941, -47.8879];
 const zoom:number = 4;
@@ -20,21 +17,6 @@ const demand = { color: 'red', fillColor: 'red' };
 const nearest_city = { color: 'blue', fillColor: 'blue' };
 
 const polyline = [[-23.5674, -46.5704], [-3.1347, -60.0233]];
-
-const legend = [
-    {
-        site_type: "Origin",
-        color: "purple",
-    },
-    {
-        site_type: "Nearest City",
-        color: "blue",
-    },
-    {
-        site_type: "Demand",
-        color: "red",
-    }
-]
 
 const LeafletMap:React.FC = () => {
 
@@ -68,14 +50,7 @@ const LeafletMap:React.FC = () => {
                 ))}
             </LayerGroup>
             <Polyline color="black" positions={polyline} />
-            <Control prepend position='topright'>
-                {legend.map((item,i)=>(
-                     <Container key={i}>
-                        <Round color={item.color}/>
-                        <Title>{item.site_type}</Title>
-                     </Container>
-                ))}
-            </Control>
+            <Legend/>
         </MapContainer>
     )
 }
