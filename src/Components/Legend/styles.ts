@@ -1,15 +1,23 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    display: flex;
-    padding: 2rem;
     background-color: white;
     align-items: center;   
     width: 20rem;
-    height: 10rem;
+    height: 60rem;
 `;
 
-const Title = styled.p`
+const InformationContainer = styled.div`
+    display: flex;
+    padding: 2rem;
+    align-items: center; 
+`;
+
+const Title = styled.h3`
+    text-align:center;
+`;
+
+const LegendTitle = styled.p`
     margin-left: 1rem;
     font-size: 2rem;
 `;
@@ -23,8 +31,16 @@ const Round = styled.div`
     background-color: ${props => props.color};
 `;
 
+const Section = styled.div`
+    border-bottom: 1px solid lightgray;
+    margin: 1rem 0;
+`;
+
 export {
     Container,
+    InformationContainer,
     Title,
-    Round
+    LegendTitle,
+    Round,
+    Section
 }
