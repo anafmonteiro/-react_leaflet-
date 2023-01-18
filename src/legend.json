@@ -1,0 +1,14 @@
+[
+    {
+        "site_type": "Origin",
+        "color": "purple"
+    },
+    {
+        "site_type": "Nearest City",
+        "color": "blue"
+    },
+    {
+        "site_type": "Demand",
+        "color": "red"
+    }
+]
