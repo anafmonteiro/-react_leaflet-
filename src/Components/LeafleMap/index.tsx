@@ -6,6 +6,7 @@ import Origin from "../../origin.json";
 import Demand from "../../demand.json";
 import Zone from '../Zone';
 import Legend from '../Legend';
+import Flow from "../../flow.json"
 
 const defaultLatLng: number[] = [-15.7941, -47.8879];
 const zoom:number = 4;
@@ -36,7 +37,7 @@ const LeafletMap:React.FC = () => {
             />
             <LayerGroup>
                 {Cities.features?.map((item, i) => (
-                    <Zone index={i} information={item} pathOptions={nearest_city}/>
+                    <Zone index={i} information={item} pathOptions={nearest_city} radius={item.geometry.radius}/>
                 ))}
             </LayerGroup>
             <LayerGroup>
@@ -46,10 +47,12 @@ const LeafletMap:React.FC = () => {
             </LayerGroup>
             <LayerGroup>
                 {Demand.features?.map((item,i)=>(
-                    <Zone index={i} information={item} pathOptions={demand}/>
+                    <Zone index={i} information={item} pathOptions={demand} radius={item.geometry.radius}/>
                 ))}
             </LayerGroup>
-            <Polyline color="black" positions={polyline} />
+            {Flow.map((item, i)=>(
+                <Polyline key={i} color="black" positions={[item.origin_point, item.demand_point]} />
+            ))}
             <Legend/>
         </MapContainer>
     )
