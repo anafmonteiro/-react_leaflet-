@@ -34,11 +34,11 @@ const LeafletMap:React.FC = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-            <div>
+            <LayerGroup>
                 {Cities.features?.map((item, i) => (
                     <Zone index={i} information={item} pathOptions={nearest_city}/>
                 ))}
-            </div>
+            </LayerGroup>
             <LayerGroup>
                 {Origin.features?.map((item,i)=>(
                     <Zone index={i} information={item} pathOptions={origin}/>

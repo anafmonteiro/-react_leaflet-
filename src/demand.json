@@ -3,18 +3,6 @@
     "features": [
       {
         "type": "Feature",
-        "id": 1,
-        "properties": {
-          "Code": "RJ",
-          "Name": "Rio De Janeiro"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [-22.8767, -43.2279]
-        }
-      },
-      {
-        "type": "Feature",
         "id": 2,
         "properties": {
           "Code": "DF",
