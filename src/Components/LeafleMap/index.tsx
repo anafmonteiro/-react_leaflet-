@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, LayerGroup, Polyline, LayersControl } from 'react-leaflet';
+import { MapContainer, TileLayer, LayerGroup, Polyline } from 'react-leaflet';
 
 import Cities from "../../cities.json";
 import Origin from "../../origin.json";
@@ -17,8 +17,6 @@ const origin = { color: 'purple', fillColor: 'purple' };
 const demand = { color: 'red', fillColor: 'red' };
 
 const nearest_city = { color: 'blue', fillColor: 'blue' };
-
-const polyline = [[-23.5674, -46.5704], [-3.1347, -60.0233]];
 
 const LeafletMap:React.FC = () => {
 
@@ -59,6 +57,7 @@ const LeafletMap:React.FC = () => {
                 {showZone.show_city && 
                     Cities.features?.map((item, i) => (
                         <Zone 
+                            key={i}
                             index={i} 
                             information={item} 
                             pathOptions={nearest_city} 
@@ -71,6 +70,7 @@ const LeafletMap:React.FC = () => {
                 {showZone.show_origin && 
                     Origin.features?.map((item,i)=>(
                         <Zone 
+                            key={i}
                             index={i} 
                             information={item} 
                             pathOptions={origin}
@@ -82,6 +82,7 @@ const LeafletMap:React.FC = () => {
                 {showZone.show_demand && 
                     Demand.features?.map((item,i)=>(
                         <DemandZone 
+                            key={i}
                             index={i} 
                             information={item} 
                             pathOptions={demand} 
@@ -91,7 +92,11 @@ const LeafletMap:React.FC = () => {
                 }
             </LayerGroup>
             {Flow.map((item, i)=>(
-                <Polyline key={i} color="black" positions={[item.origin_point, item.demand_point]} />
+                <Polyline 
+                    key={i} 
+                    color="black" 
+                    positions={[item.origin_point, item.demand_point]} 
+                />
             ))}
             <Legend onClick={check} check={checkValue}/>
         </MapContainer>
