@@ -4,7 +4,7 @@ const Container = styled.div`
     background-color: white;
     align-items: center;   
     width: 20rem;
-    height: 60rem;
+    height: 100rem;
 `;
 
 const InformationContainer = styled.div`
