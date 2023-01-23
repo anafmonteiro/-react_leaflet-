@@ -11,18 +11,18 @@ interface ZoneProps {
 const Zone:React.FC<ZoneProps> = (props:ZoneProps) => {
     const {information} = props
     return (
-    <Circle 
-        key={props.index}
-        center={information.geometry.coordinates} 
-        pathOptions={props.pathOptions} 
-        radius={props.radius || 200000} 
-    >
-         <Tooltip direction="top" offset={[10, 0]}>
-            <span style={{ fontSize: 14, fontWeight: "bold" }}>
-                {information?.properties?.Name}
-            </span>
-        </Tooltip>
-    </Circle>
+        <Circle 
+            key={props.index}
+            center={information.geometry.coordinates} 
+            pathOptions={props.pathOptions} 
+            radius={props.radius || 200000} 
+        >
+            <Tooltip direction="top" offset={[10, 0]}>
+                <span style={{ fontSize: 14, fontWeight: "bold" }}>
+                    {information?.properties?.Name}
+                </span>
+            </Tooltip>
+        </Circle>
     )
 }
 
