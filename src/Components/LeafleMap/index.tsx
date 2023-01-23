@@ -7,6 +7,7 @@ import Demand from "../../demand.json";
 import Zone from '../Zone';
 import Legend from '../Legend';
 import Flow from "../../flow.json"
+import DemandZone from '../Zone/DemandZone';
 
 const defaultLatLng: number[] = [-15.7941, -47.8879];
 const zoom:number = 4;
@@ -47,7 +48,7 @@ const LeafletMap:React.FC = () => {
             </LayerGroup>
             <LayerGroup>
                 {Demand.features?.map((item,i)=>(
-                    <Zone index={i} information={item} pathOptions={demand} radius={item.geometry.radius}/>
+                    <DemandZone index={i} information={item} pathOptions={demand} radius={item.geometry.radius}/>
                 ))}
             </LayerGroup>
             {Flow.map((item, i)=>(

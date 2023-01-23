@@ -10,7 +10,10 @@
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-15.7941, -47.8879],
+          "demand_coordinates": [-15.7941, -47.8879],
+          "demand_name": "Brasília",
+          "origin_coordinates": [-16.6733, -49.2558],
+          "origin_name": "Goiânia",
           "radius": 150000
         }
       },
@@ -23,7 +26,10 @@
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-13.0148, -38.4881],
+          "demand_coordinates": [-13.0148, -38.4881],
+          "demand_name": "Salvador",
+          "origin_coordinates": [-25.433, -49.2718],
+          "origin_name": "Curitiba",
           "radius": 50000
         }
       },
@@ -36,7 +42,10 @@
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-19.9375, -43.9265],
+          "demand_coordinates": [-19.9375, -43.9265],
+          "demand_name": "Belo Horizonte",
+          "origin_coordinates": [-23.5674, -46.5704],
+          "origin_name": "São Paulo",
           "radius": 150000
         }
       },
@@ -49,7 +58,10 @@
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-3.1347, -60.0233],
+          "demand_coordinates": [-3.1347, -60.0233],
+          "demand_name": "Manaus",
+          "origin_coordinates": [-23.5674, -46.5704],
+          "origin_name": "São Paulo",
           "radius": 50000
         }
       },
@@ -62,7 +74,10 @@
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [-8.0628, -34.8889],
+          "demand_coordinates": [-13.0148, -38.4881],
+          "demand_name": "Recife",
+          "origin_coordinates": [-25.433, -49.2718],
+          "origin_name": "Curitiba",
           "radius": 50000
         }
       }
