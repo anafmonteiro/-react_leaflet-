@@ -61,7 +61,6 @@ const LeafletMap:React.FC = () => {
 
     const cityInformation = async(value:string) => {
         const response = await listlistAllCityInformation(value)
-        console.log("cityInformation", response[0].geometry.origin_coordinates , response[0].geometry.demand_coordinates)
         setAllCities(response)
         setShowFlow(false)
         setNewFlow({

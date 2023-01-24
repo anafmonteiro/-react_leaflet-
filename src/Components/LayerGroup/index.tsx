@@ -8,7 +8,6 @@ interface LayerGroupComponentProps {
 }
 
 const LayerGroupComponent:React.FC<LayerGroupComponentProps> = (props:LayerGroupComponentProps) => {
-    console.log("information", props.information)
     const { information } = props
 
     const setPathOptions = (type:string) => {
