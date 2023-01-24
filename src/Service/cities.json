@@ -1,0 +1,212 @@
+{
+    "features": [
+      {
+        "type": "Feature",
+        "id": 0,
+        "properties": {
+          "Code": "PA",
+          "Name": "Belém",
+          "Type": "nearest_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-1.4598, -48.4878],
+          "radius": 50000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 1,
+        "properties": {
+          "Code": "RS",
+          "Name": "Porto Alegre",
+          "Type": "nearest_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-30.03, -51.2287],
+          "radius": 100000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 4,
+        "properties": {
+          "Code": "MA",
+          "Name": "São Luís",
+          "Type": "nearest_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-2.5319, -44.2979],
+          "radius": 100000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 5,
+        "properties": {
+          "Code": "RJ",
+          "Name": "São Gonçalo",
+          "Type": "nearest_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-22.8295, -43.0323],
+          "radius": 150000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 6,
+        "properties": {
+          "Code": "AL",
+          "Name": "Maceió",
+          "Type": "nearest_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-9.6608, -35.7016],
+          "radius": 50000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 2,
+        "properties": {
+          "Code": "DF",
+          "Name": "Brasília",
+          "Type": "demand_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "demand_coordinates": [-15.7941, -47.8879],
+          "demand_name": "Brasília",
+          "origin_coordinates": [-16.6733, -49.2558],
+          "origin_name": "Goiânia",
+          "radius": 150000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 3,
+        "properties": {
+          "Code": "BA",
+          "Name": "Salvador",
+          "Type": "demand_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "demand_coordinates": [-13.0148, -38.4881],
+          "demand_name": "Salvador",
+          "origin_coordinates": [-25.433, -49.2718],
+          "origin_name": "Curitiba",
+          "radius": 50000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 5,
+        "properties": {
+          "Code": "BH",
+          "Name": "Belo Horizonte",
+          "Type": "demand_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "demand_coordinates": [-19.9375, -43.9265],
+          "demand_name": "Belo Horizonte",
+          "origin_coordinates": [-23.5674, -46.5704],
+          "origin_name": "São Paulo",
+          "radius": 150000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 6,
+        "properties": {
+          "Code": "AM",
+          "Name": "Manaus",
+          "Type": "demand_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "demand_coordinates": [-3.1347, -60.0233],
+          "demand_name": "Manaus",
+          "origin_coordinates": [-23.5674, -46.5704],
+          "origin_name": "São Paulo",
+          "radius": 50000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 8,
+        "properties": {
+          "Code": "PE",
+          "Name": "Recife",
+          "Type": "demand_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "demand_coordinates": [-13.0148, -38.4881],
+          "demand_name": "Recife",
+          "origin_coordinates": [-25.433, -49.2718],
+          "origin_name": "Curitiba",
+          "radius": 50000
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 0,
+        "properties": {
+          "Code": "SP",
+          "Name": "São Paulo",
+          "Type": "origin_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-23.5674, -46.5704]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 4,
+        "properties": {
+          "Code": "CE",
+          "Name": "Fortaleza",
+          "Type": "origin_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.7238, -38.5899]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 7,
+        "properties": {
+          "Code": "PR",
+          "Name": "Curitiba",
+          "Type": "origin_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-25.433, -49.2718]
+        }
+      },
+      {
+        "type": "Feature",
+        "id": 9,
+        "properties": {
+          "Code": "GO",
+          "Name": "Goiânia",
+          "Type": "origin_city"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-16.6733, -49.2558]
+        }
+      }
+    ]
+  }
+  
