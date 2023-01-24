@@ -27,9 +27,17 @@ const listAllOriginCities = async() => {
     return response.filter(item=>item.properties.Type === "origin_city")
 }
 
+const listlistAllCityInformation = async(value:string) => {
+    const response = Cities.features
+    const rep1 = response.filter(item=>item.properties.Name === value)
+    const rep2 = response.filter(item=>item.properties.Name === rep1[0].geometry.origin_name)
+    return [...rep1, ...rep2]
+}
+
 export {
     listAllCities,
     listAllNearestCity,
     listAllDemandCities,
-    listAllOriginCities
+    listAllOriginCities,
+    listlistAllCityInformation
 }

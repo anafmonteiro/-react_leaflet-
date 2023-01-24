@@ -23,7 +23,7 @@ const DemandZone:React.FC<ZoneProps> = (props:ZoneProps) => {
             center={information.geometry.demand_coordinates} 
             pathOptions={props.pathOptions} 
             radius={props.radius || 200000} 
-            eventHandlers={{ click: ()=> props.onClick(information)}}
+            eventHandlers={{ click: ()=> props.onClick(information.properties.Name)}}
         >
             <Tooltip direction="top" offset={[10, 0]} >
                 <TooltipContainer>
