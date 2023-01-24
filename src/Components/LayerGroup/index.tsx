@@ -3,15 +3,11 @@ import Zone from "../Zone";
 import DemandZone from "../Zone/DemandZone";
 
 interface LayerGroupComponentProps {
-    information: any,
-    show: {
-        show_demand:boolean, show_origin:boolean, show_city:boolean 
-    }
-    type: string
+    information: any
 }
 
 const LayerGroupComponent:React.FC<LayerGroupComponentProps> = (props:LayerGroupComponentProps) => {
-    const {information, show, type} = props
+    const { information } = props
 
     const setPathOptions = (type:string) => {
         switch(type){

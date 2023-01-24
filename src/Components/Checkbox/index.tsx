@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 
 import { Container } from "./styles";
@@ -14,7 +14,7 @@ interface CheckboxComponentProps {
 
 const CheckboxComponent:React.FC<CheckboxComponentProps> = (props:CheckboxComponentProps) => {
 
-    const {check, onClick} = props
+    const { onClick, check } = props
 
     return (
         <Container>
@@ -24,7 +24,7 @@ const CheckboxComponent:React.FC<CheckboxComponentProps> = (props:CheckboxCompon
                     sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} 
                     control={
                         <Checkbox 
-                            onClick={()=>onClick("demand")}
+                            onClick={()=> onClick("demand_city")}
                             checked={check.demand_check}
                         />
                     } 
@@ -35,7 +35,7 @@ const CheckboxComponent:React.FC<CheckboxComponentProps> = (props:CheckboxCompon
                     sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} 
                     control={
                         <Checkbox 
-                            onClick={()=>onClick("origin")}
+                            onClick={()=> onClick("origin_city")}
                             checked={check.origin_check}
                         />
                     } 
@@ -46,7 +46,7 @@ const CheckboxComponent:React.FC<CheckboxComponentProps> = (props:CheckboxCompon
                     sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} 
                     control={
                         <Checkbox 
-                            onClick={()=>onClick("all")}
+                            onClick={()=> onClick("all")}
                             checked={check.all_check}
                         />
                     } 
