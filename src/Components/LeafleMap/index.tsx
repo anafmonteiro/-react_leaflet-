@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Polyline } from 'react-leaflet';
 
 import Legend from '../Legend';
 import Flow from "../../flow.json";
-import { listAllCities, listAllDemandCities, listAllOriginCities } from '../../Service/api';
+import { listAllCities, listAllDemandCities, listAllOriginCities, listlistAllCityInformation } from '../../Service/api';
 import LayerGroupComponent from '../LayerGroup';
 
 const defaultLatLng: number[] = [-15.7941, -47.8879];
@@ -13,10 +13,11 @@ const LeafletMap:React.FC = () => {
 
     const [map, setMap] = useState(false);
 
-    const [checkValue, setCheckValue] = useState({ demand_check:false, origin_check:false, all_check:true });
+    const [checkValue, setCheckValue] = useState({ demand_check:false, origin_check:false, all_check:false });
 
     const [allCities, setAllCities] = useState<any>()
     const [showFlow, setShowFlow] = useState<boolean>(true)
+    const [newFlow, setNewFlow] = useState<any>(undefined)
     
     const showSomeInformations = (value:string) => {
 
@@ -58,6 +59,18 @@ const LeafletMap:React.FC = () => {
         setShowFlow(false)
     }
 
+    const cityInformation = async(value:string) => {
+        const response = await listlistAllCityInformation(value)
+        console.log("cityInformation", response[0].geometry.origin_coordinates , response[0].geometry.demand_coordinates)
+        setAllCities(response)
+        setShowFlow(false)
+        setNewFlow({
+            id:1,
+            origin_point: response[0].geometry.origin_coordinates, 
+            demand_point: response[0].geometry.demand_coordinates
+        })
+    }
+
     useEffect(()=>{
         listCities()
     },[])
@@ -77,15 +90,23 @@ const LeafletMap:React.FC = () => {
             />
             <LayerGroupComponent 
                 information={allCities} 
+                onClick={cityInformation}
             />
             {showFlow && 
-                Flow.map((item, i)=>(
+                Flow.map((item: { origin_point: any; demand_point: any; }, i: number)=>(
                     <Polyline 
                         key={i} 
                         color="black" 
                         positions={[item.origin_point, item.demand_point]} 
                     />
                 ))
+            }
+            {newFlow && 
+                <Polyline 
+                    key={newFlow.id} 
+                    color="black" 
+                    positions={[newFlow.origin_point, newFlow.demand_point]} 
+                />
             }
             <Legend onClick={showSomeInformations} check={checkValue}/>
         </MapContainer>

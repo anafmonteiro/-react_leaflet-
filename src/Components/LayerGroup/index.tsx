@@ -3,10 +3,12 @@ import Zone from "../Zone";
 import DemandZone from "../Zone/DemandZone";
 
 interface LayerGroupComponentProps {
-    information: any
+    information: any,
+    onClick: (value:string) => void;
 }
 
 const LayerGroupComponent:React.FC<LayerGroupComponentProps> = (props:LayerGroupComponentProps) => {
+    console.log("information", props.information)
     const { information } = props
 
     const setPathOptions = (type:string) => {
@@ -31,7 +33,7 @@ const LayerGroupComponent:React.FC<LayerGroupComponentProps> = (props:LayerGroup
                     information={item} 
                     pathOptions={setPathOptions(item.properties.Type)} 
                     radius={item.geometry.radius}
-                    onClick={()=>console.log("clique")}
+                    onClick={props.onClick}
                 />
             :
 
